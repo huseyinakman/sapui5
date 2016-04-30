@@ -16,7 +16,7 @@
 			formatOptions: {
 				showMeasure: false
 			}
-		}"
+}"
 		numberUnit="{view>/currency}"/>
       </items>
    </List>
