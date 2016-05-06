@@ -1,0 +1,103 @@
+<mvc:View 
+	controllerName="sap.ui.demo.nav.controller.Details"
+	xmlns="sap.m" 
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<Page 
+		id="detailsPage"
+		title="{i18n>DETAIL_TITLE}"
+		class="sapUiFioriObjectPage">
+	
+		<ObjectHeader id="header"
+			 title="{odata>ProductName}"
+			 number="{Quantity}"
+			 numberUnit="Adet">
+			<customData id="customData1">
+                <core:CustomData id="coreCustomData1" key="sapDtResourcePath" value="Postings"></core:CustomData>
+            </customData>
+			<attributes id="detailsAttributes">
+				<ObjectAttribute id="ATTR" text="{odata>ProductName}" />
+			</attributes>
+		</ObjectHeader>
+		
+		<IconTabBar 
+			id="iconTabBar"
+			expanded="{device>/isNoPhone}" >
+			<customData id="customData2">
+                <core:CustomData id="coreCustomData2" key="sapDtResourcePath" value="Postings"></core:CustomData>
+            </customData>
+			<items id="detailsItems">
+				<IconTabFilter id="iconTabFilter1"
+					icon="sap-icon://hint">
+					<form:SimpleForm
+						id="form1"
+						layout="ResponsiveGridLayout"
+						minWidth="1024" >
+						<core:Title id="title1" text="More Details" />
+						<Label id="label1" text="Legal">
+							<customData id="customData3">
+								<core:CustomData id="coreCustomData3" key="sapDtResourcePath" value="Postings"></core:CustomData>
+							</customData>
+						</Label>
+						
+						<Text id="text1" text="{ShipperName}" >
+							<customData id="customData4">
+								<core:CustomData id="coreCustomData4" key="sapDtResourcePath" value="Postings"></core:CustomData>
+							</customData>
+						</Text>
+						
+						<Label id="label2" text="Startdate">
+							<customData id="customData6">
+								<core:CustomData id="coreCustomData6" key="sapDtResourcePath" value="Postings"></core:CustomData>
+							</customData>
+						</Label>
+						
+						<Text id="text2" text="{Startdate}" >
+							<customData id="customData7">
+								<core:CustomData id="coreCustomData7" key="sapDtResourcePath" value="Postings"></core:CustomData>
+							</customData>
+						</Text>
+						
+						
+						<core:ExtensionPoint name="extIconTabFilterForm1"/>
+						
+					</form:SimpleForm>
+				</IconTabFilter>
+						
+				<IconTabFilter id="iconTabFilter2"
+					icon="sap-icon://display">
+					<form:SimpleForm
+						id="form2"
+						layout="ResponsiveGridLayout"
+						minWidth="1024" >
+						<core:Title id="title2" text="More Details" />
+						<Label id="label3" text="Company">
+							<customData id="customData9">
+								<core:CustomData id="coreCustomData9" key="sapDtResourcePath" value="Postings"></core:CustomData>
+							</customData>
+						</Label>
+						
+						<Text id="text3" text="{Company}" >
+							<customData id="customData10">
+								<core:CustomData id="coreCustomData10" key="sapDtResourcePath" value="Postings"></core:CustomData>
+							</customData>
+						</Text>
+						
+						
+						<core:ExtensionPoint name="extIconTabFilterForm2"/>
+						
+					</form:SimpleForm>
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+		<core:ExtensionPoint name="extDetail"/>
+		<footer id="detailsFooter">
+			<Bar id="bar">
+				<contentRight id="detailsContentRight">
+					<Button id="actionButton" icon="sap-icon://action" press="openActionSheet"></Button>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

@@ -1,0 +1,28 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+	controllerName="sap.ui.demo.nav.controller.Selection" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Panel headerText="{i18n>selectionpanel}" width="300px">
+						<content>
+							<Label text="{i18n>datefrom}"/>
+							<DatePicker id="date_from" valueFormat="yyyy-MM-ddTHH:mm:ss" change="handleChange" width="100%" class="sapUiSmallMarginBottom"/>
+							<Label text="{i18n>dateto}"/>
+							<DatePicker id="date_to" valueFormat="yyyy-MM-ddTHH:mm:ss" change="handleChange" width="100%" class="sapUiSmallMarginBottom"/>
+							<Label text="{i18n>customer}"/>
+							<Input id="customer" type="Text" width="100%" class="sapUiSmallMarginBottom" placeholder="Enter Customer Number ..."/>
+							<Button text="Run" width="100%" press="onPress"/>
+						</content>
+					</Panel>
+					<!--<Panel headerText="{i18n>submit}">-->
+					<!--	<content>-->
+					<!--		<Button id="displayNotFoundBtn" text="{i18n>DisplayNotFound}" press="onDisplayNotFound" class="sapUiTinyMarginEnd"/>-->
+					<!--		<Button id="employeeListBtn" text="{i18n>ShowEmployeeList}" press="onNavToEmployees" class="sapUiTinyMarginEnd"/>-->
+					<!--	</content>-->
+					<!--</Panel>-->
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,14 @@
+<mvc:View controllerName="sap.ui.demo.nav.controller.Employee" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form"
+	busyIndicatorDelay="0">
+	<Page id="employeePage" title="{i18n>EmployeeDetailsOf}" showNavButton="true" navButtonPress="onNavBack"
+		class="sapUiResponsiveContentPadding">
+		<content>
+			<Panel id="employeePanel" width="auto" class="sapUiResponsiveMargin sapUiNoContentPadding">
+				<content>
+					<Text text="{odata>ProductName}"></Text>
+					<Text text="{odata>ShipperName}"></Text>
+				</content>
+			</Panel>
+		</content>
+	</Page>
+</mvc:View>
