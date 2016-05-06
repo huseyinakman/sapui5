@@ -5,8 +5,7 @@ sap.ui.define([
 
 	return Controller.extend("sap.ui.demo.nav.controller.Master", {
 		onInit: function() {
-			var filters = [];
-			var searchString = this.getView().byId("searchField").getValue();
+
 		},
 		onSearch: function() {
 			// add filter for search

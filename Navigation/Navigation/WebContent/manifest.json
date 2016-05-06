@@ -53,7 +53,10 @@
 				"settings": {
 					"bundleName": "sap.ui.demo.nav.i18n.i18n"
 				}
-			}
+			},
+	  "odata": {
+		"dataSource": "invoiceRemote"
+	  }
 		},
 		"routing": {
 			"config": {
